@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BakeRush: Customer Order Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+  <section id="menu-screen">
+    <h2>👨‍🍳 Welcome to BakeRush!</h2>
+    <label for="player-name">Enter Your Name:</label><br />
+    <input type="text" id="player-name" placeholder="eg. Anjum" /><br /><br>
+
+    <label for="player-age">Enter Your Age:</label><br />
+    <input type="number" id="player-age" placeholder="eg. 20" /><br /><br />
+
+    <button id="start-btn">Start Game</button>
+  </section>
+
+  <section id="order-area" style="display: none">
+    <div id="player-info">👩‍🍳 Chef: <span id="player-display"></span></div>
+    <div>🏆 Score: <span id="score-count">0</span></div>
+    <div id="customer-order">
+      <span id="customer-face">😄</span>
+      🧁 <strong>Order:</strong> <span id="order-item">Waiting...</span>
+    </div>
+    <div id="timer">⏱️ <strong>Time Left:</strong> <span id="time-left">30s</span></div>
+
+    <div id="item-buttons">
+      <button class="item-btn">🎂 Cake</button>
+      <button class="item-btn">🍩 Donut</button>
+      <button class="item-btn">🍪 Cookie</button>
+      <button class="item-btn">☕ Coffee</button>
+      <button class="item-btn">🧁 Cupcake</button>
+    </div>
+
+    <button id="serve-btn">✅ Serve Order</button>
+  </section>
+
+  <section id="final-summary" style="display: none; text-align: center; padding: 20px;">
+    <h2>🎉 Game Over!</h2>
+    <p id="summary-text"></p>
+    <button id="restart-btn">🔁 Play Again</button>
+  </section>
+
+  <footer>
+    Made with ❤️ by Anjum | BakeRush
+    <br>
+     Theme:
+    <select id="theme-select">
+      <option value="light">Vanilla</option>
+      <option value="dark">Chocolate</option>
+    </select>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
